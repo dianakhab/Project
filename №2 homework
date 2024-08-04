@@ -1,0 +1,5 @@
+completed_homeworks = 12
+spent_hours = 1.5
+name_course = 'Python'
+average_time_for_task = spent_hours / completed_homeworks
+print(f"Курс: {name_course}, всего задач: {completed_homeworks}, затрачено часов: {spent_hours}, среднее время выполнения {average_time_for_task:.3f} часа.")

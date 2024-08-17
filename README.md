@@ -1,21 +1,24 @@
-[module2_4.txt](https://github.com/user-attachments/files/16573272/module2_4.txt)
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-primes = []
-not_primes = []
+calls = 0
+def count_calls ():
+    global calls
+    calls += 1
+def string_info (string):
+    lenght =  len(string)
+    upper =  string.upper()
+    lower = string.lower()
+    count_calls()
+    return (lenght, upper, lower)
+def is_contains (string, list_to_search):
+    string_lower = string.lower()
+    count_calls()
+    return string.lower() in(item.lower() for item in list_to_search)
 
-for num in numbers:
-    if num >= 1:
-        is_prime = True
-        for i in range(2, int(num**0.5) + 1):
-            if num % i == 0:
-                is_prime = False
-                break
-        if is_prime:
-            primes.append(num)
-        else:
-            not_primes.append(num)
-    else:
-        not_primes.append(num)
+print(string_info('Orange'))
+print(string_info('Apple'))
+print(is_contains('Cucumber', ['cucumber', 'CuCuMbEr', 'CucuMBER']))
+print(is_contains('watermelon', ['melon', 'water']))
+print(calls)
 
-print("Простые числа:", primes)
-print("Непростые числа:", not_primes)
+
+
+[module_3_1.txt](https://github.com/user-attachments/files/16644627/module_3_1.txt)
